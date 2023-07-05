@@ -1,0 +1,40 @@
+@import '/src/index.css';
+
+.split {
+  position: relative;
+}
+
+.split::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #195a6a 7.81%, #ffffff 51.44%, #195a6a 90.62%);
+  opacity: 0.6;
+  border-radius: 18px;
+  height: 1px;
+}
+
+.active {
+  position: relative;
+  border-radius: 4px;
+  color: #ffffff !important;
+  @apply bg-hover;
+}
+
+.active svg {
+  fill: #ffffff;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 4px;
+  height: 16px;
+  @apply !bg-primary;
+  transform: translateY(-50%);
+  border-radius: 0px 2px 2px 0px;
+}
